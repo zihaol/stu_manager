@@ -1,5 +1,6 @@
 #pragma once
 
+#include <string>
 enum SearchCmd
 {
 	SEARCH_CMD_ERROR,
@@ -11,14 +12,23 @@ enum SearchCmd
 
 class StuManagerUIBase;
 class CStuUIDirector;
+class CSQLOper;
 class CStuSearchUI : public StuManagerUIBase
 {
 public:
-	CStuSearchUI(CStuUIDirector* pUIDirector);
+	CStuSearchUI(CStuUIDirector* pUIDirector, CSQLOper* pSqlOper);
 	~CStuSearchUI();
 	virtual void show();
 	void onCommand();
+	int getUserSearchCmd();
+
+	//²éÑ¯½Ó¿Ú
+	void waitUserSearchCmd(const char* szTip);
+	void onUserSearchCmd();
+	void setSqlOper(CSQLOper* pSqlOper);
 private:
-	CStuUIDirector* m_pUIDirector;
+	CStuUIDirector*			m_pUIDirector;
+	int						m_nUserSearchCmd;
+	CSQLOper*				m_pSqlOper;
 };
 

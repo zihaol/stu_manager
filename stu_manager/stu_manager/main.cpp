@@ -1,5 +1,6 @@
 #include "StuManagerUI.h"
 #include "StuSearchUI.h"
+#include "SQLOper.h"
 
 void main()
 {
@@ -10,6 +11,8 @@ void main()
 		{
 			break;
 		}
+		CSQLOper* pSqlOper = new CSQLOper;
+		pSqlOper->Open("(Local)", "MY_DB", "sa", "123456");
 		//创建主界面
 		StuManagerMainUI* pMainUI = new StuManagerMainUI(pStuDirector);
 		if (nullptr != pMainUI)
@@ -18,7 +21,7 @@ void main()
 		}
 
 		//创建查找界面
-		CStuSearchUI* pSearchUI = new CStuSearchUI(pStuDirector);
+		CStuSearchUI* pSearchUI = new CStuSearchUI(pStuDirector, pSqlOper);
 		if (nullptr != pSearchUI)
 		{
 			pStuDirector->addUI(pSearchUI, STU_COM_SEARCH);
@@ -28,6 +31,7 @@ void main()
 		delete pStuDirector;
 		delete pMainUI;
 		delete pSearchUI;
+		delete pSqlOper;
 	} while (false);
 
 	//销毁指针

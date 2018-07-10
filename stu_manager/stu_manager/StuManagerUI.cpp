@@ -111,6 +111,7 @@ void StuManagerMainUI::onCommand()
 {
 	switch (getUserSclect())
 	{
+	case STU_COM_ADD:
 	case STU_COM_HELP:
 	case STU_COM_SEARCH:
 		//onComHelp();

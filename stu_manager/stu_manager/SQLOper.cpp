@@ -24,6 +24,25 @@ CSQLOper::~CSQLOper()
 	::CoUninitialize();
 }
 
+void CSQLOper::AddRecord(const char* szSqlCmd, long lOptions)
+{
+	do 
+	{
+		if (!IsLinkInitSuccess())
+		{
+			break;
+		}
+
+		if (nullptr == m_pCommand)
+		{
+			m_pCommand.CreateInstance(__uuidof(Command));
+			m_pCommand->ActiveConnection = m_pConnection;
+		}
+		m_pCommand->CommandText = (_bstr_t)szSqlCmd;
+		m_pCommand->Execute(NULL, NULL,adCmdText); 
+	} while (false);
+}
+
 bool CSQLOper::Open(const char* szServerAddress, const char* szDatabase, const char* szUserName, const char* szPassWord, long lOptions)
 {
 	bool bSuccess = true;

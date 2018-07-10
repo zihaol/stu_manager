@@ -18,6 +18,7 @@ public:
 	void UpdateRecordSet(const char* szSqlCmd, enum CursorTypeEnum CurscorType = adOpenDynamic, enum LockTypeEnum LockType = adLockOptimistic, long lOptions = adCmdText);
 	_variant_t getData(long lLieNum);
 	_variant_t getData(const char* szCollect);
+	void AddRecord(const char* szSqlCmd, long lOptions = adCmdText);
 private:
 	_ConnectionPtr				m_pConnection;
 	_CommandPtr					m_pCommand;

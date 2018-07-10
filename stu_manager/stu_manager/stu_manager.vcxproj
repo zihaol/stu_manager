@@ -77,12 +77,14 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="SQLOper.h" />
+    <ClInclude Include="StuAddUI.h" />
     <ClInclude Include="StuManagerUI.h" />
     <ClInclude Include="StuSearchUI.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
     <ClCompile Include="SQLOper.cpp" />
+    <ClCompile Include="StuAddUI.cpp" />
     <ClCompile Include="StuManagerUI.cpp" />
     <ClCompile Include="StuSearchUI.cpp" />
   </ItemGroup>

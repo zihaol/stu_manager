@@ -35,8 +35,11 @@ void CStuAddUI::onUserAddUserCmd()
 	//添加增加玩家代码
 	char szSearch[128];
 	memset(szSearch, 0, sizeof(szSearch));
-	sprintf_s(szSearch, sizeof(szSearch), "insert * from stu_info where num = '%d'", getUserSearchCmd());
-
+	sprintf_s(szSearch, sizeof(szSearch), "INSERT INTO stu_info VALUES ('%d','%s','%d');", m_nID, m_strAddUserName.c_str(), m_nAge);
+	if (nullptr != m_pSqlOper)
+	{
+		m_pSqlOper->AddRecord(szSearch);
+	}
 	show();
 	onCommand();
 }

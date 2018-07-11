@@ -27,6 +27,12 @@
     <ClInclude Include="StuAddUI.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="StuDelUI.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="StuChangeUI.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="StuManagerUI.cpp">
@@ -42,6 +48,12 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="StuAddUI.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="StuDelUI.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="StuChangeUI.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

@@ -24,7 +24,7 @@ CSQLOper::~CSQLOper()
 	::CoUninitialize();
 }
 
-void CSQLOper::AddRecord(const char* szSqlCmd, long lOptions)
+void CSQLOper::ExecSql(const char* szSqlCmd, long lOptions)
 {
 	do 
 	{

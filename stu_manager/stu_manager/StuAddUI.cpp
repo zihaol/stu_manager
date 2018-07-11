@@ -8,7 +8,6 @@ using namespace std;
 
 CStuAddUI::CStuAddUI(CStuUIDirector* pUIDirector, CSQLOper* pSqlOper)
 	: m_pUIDirector(pUIDirector)
-	, m_nUserSearchCmd(1)
 	, m_pSqlOper(pSqlOper)
 {
 
@@ -38,7 +37,7 @@ void CStuAddUI::onUserAddUserCmd()
 	sprintf_s(szSearch, sizeof(szSearch), "INSERT INTO stu_info VALUES ('%d','%s','%d');", m_nID, m_strAddUserName.c_str(), m_nAge);
 	if (nullptr != m_pSqlOper)
 	{
-		m_pSqlOper->AddRecord(szSearch);
+		m_pSqlOper->ExecSql(szSearch);
 	}
 	show();
 	onCommand();

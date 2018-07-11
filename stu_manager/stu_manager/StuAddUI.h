@@ -24,7 +24,7 @@ public:
 	void onUserAddUserCmd();
 private:
 	CStuUIDirector*			m_pUIDirector;
-	int						m_nUserSearchCmd;
+	//int						m_nUserSearchCmd;
 	CSQLOper*				m_pSqlOper;
 	//添加玩家信息
 	std::string					m_strAddUserName;

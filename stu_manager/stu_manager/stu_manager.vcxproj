@@ -78,6 +78,8 @@
   <ItemGroup>
     <ClInclude Include="SQLOper.h" />
     <ClInclude Include="StuAddUI.h" />
+    <ClInclude Include="StuChangeUI.h" />
+    <ClInclude Include="StuDelUI.h" />
     <ClInclude Include="StuManagerUI.h" />
     <ClInclude Include="StuSearchUI.h" />
   </ItemGroup>
@@ -85,6 +87,8 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="SQLOper.cpp" />
     <ClCompile Include="StuAddUI.cpp" />
+    <ClCompile Include="StuChangeUI.cpp" />
+    <ClCompile Include="StuDelUI.cpp" />
     <ClCompile Include="StuManagerUI.cpp" />
     <ClCompile Include="StuSearchUI.cpp" />
   </ItemGroup>

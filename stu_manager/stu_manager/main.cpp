@@ -1,6 +1,8 @@
 #include "StuManagerUI.h"
 #include "StuSearchUI.h"
 #include "StuAddUI.h"
+#include "StuDelUI.h"
+#include "StuChangeUI.h"
 #include "SQLOper.h"
 
 void main()
@@ -35,12 +37,28 @@ void main()
 			pStuDirector->addUI(pAddUI, STU_COM_ADD);
 		}
 
+		//创建删除界面
+		CStuDelUI* pDelUI = new CStuDelUI(pStuDirector, pSqlOper);
+		if (nullptr != pDelUI)
+		{
+			pStuDirector->addUI(pDelUI, STU_COM_DEL);
+		}
+
+		//创建修改界面
+		CStuChangeUI* pChangeUI = new CStuChangeUI(pStuDirector, pSqlOper);
+		if (nullptr != pChangeUI)
+		{
+			pStuDirector->addUI(pChangeUI, STU_COM_CHANGE);
+		}
+
 		pStuDirector->changeToUI(STU_COM_HELP);
 		delete pStuDirector;
 		delete pMainUI;
 		delete pSearchUI;
 		delete pSqlOper;
 		delete pAddUI;
+		delete pDelUI;
+		delete pChangeUI;
 	} while (false);
 
 	//销毁指针

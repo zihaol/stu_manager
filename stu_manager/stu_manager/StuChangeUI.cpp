@@ -33,11 +33,13 @@ void CStuChangeUI::show()
 
 void CStuChangeUI::onUserSearchCmd()
 {
-	char szChangeCommand[128];
-	memset(szChangeCommand, 0, sizeof(szChangeCommand));
-	sprintf_s(szChangeCommand, sizeof(szChangeCommand),"UPDATE stu_info SET name = '%s',age = '%d' WHERE num = '%d'", m_strChangeName.c_str(), m_nAge, m_nOperUserID);
+	//char szChangeCommand[128];
+	//memset(szChangeCommand, 0, sizeof(szChangeCommand));
+	//sprintf_s(szChangeCommand, sizeof(szChangeCommand),"UPDATE stu_info SET name = '%s',age = '%d' WHERE num = '%d'", m_strChangeName.c_str(), m_nAge, m_nOperUserID);
 
-	m_pSqlOper->ExecSql(szChangeCommand);
+	//测试调用存储过程
+	//m_pSqlOper->ExecSql("updateStuInfo", adCmdStoredProc);
+	m_pSqlOper->updateStuInfo(m_nOperUserID, m_strChangeName.c_str(), m_nAge);
 }
 
 void CStuChangeUI::waitUserChangeCommand()

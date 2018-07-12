@@ -32,12 +32,13 @@ void CStuAddUI::show()
 void CStuAddUI::onUserAddUserCmd()
 {
 	//添加增加玩家代码
-	char szSearch[128];
-	memset(szSearch, 0, sizeof(szSearch));
-	sprintf_s(szSearch, sizeof(szSearch), "INSERT INTO stu_info VALUES ('%d','%s','%d');", m_nID, m_strAddUserName.c_str(), m_nAge);
+	//char szSearch[128];
+	//memset(szSearch, 0, sizeof(szSearch));
+	//sprintf_s(szSearch, sizeof(szSearch), "INSERT INTO stu_info VALUES ('%d','%s','%d');", m_nID, m_strAddUserName.c_str(), m_nAge);
 	if (nullptr != m_pSqlOper)
 	{
-		m_pSqlOper->ExecSql(szSearch);
+		//m_pSqlOper->ExecSql(szSearch);
+		m_pSqlOper->addStuInfo(m_nID, m_strAddUserName.c_str(), m_nAge);
 	}
 	show();
 	onCommand();

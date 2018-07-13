@@ -82,6 +82,7 @@
     <ClInclude Include="StuDelUI.h" />
     <ClInclude Include="StuManagerUI.h" />
     <ClInclude Include="StuSearchUI.h" />
+    <ClInclude Include="StuShowAllUI.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
@@ -91,6 +92,7 @@
     <ClCompile Include="StuDelUI.cpp" />
     <ClCompile Include="StuManagerUI.cpp" />
     <ClCompile Include="StuSearchUI.cpp" />
+    <ClCompile Include="StuShowAllUI.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -42,7 +42,8 @@ void CStuSearchUI::onUserSearchCmd()
 		m_pSqlOper->UpdateRecordSet(szSearch);
 
 		//Êä³ö½á¹û
-		cout << (char*)(_bstr_t)m_pSqlOper->getData("name") << endl;
+		//cout << (char*)(_bstr_t)m_pSqlOper->getData("name") << endl;
+		m_pSqlOper->showRecord();
 		show();
 		onCommand();
 	}

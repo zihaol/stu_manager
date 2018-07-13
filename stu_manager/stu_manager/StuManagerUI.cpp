@@ -103,6 +103,7 @@ void StuManagerMainUI::onComHelp()
 	cout << "4:查找学生信息" << endl;
 	cout << "5:更改学生信息" << endl;
 	cout << "6:退出" << endl;
+	cout << "7:显示学生信息" << endl;
 	waitUserCommand("请输入命令:");
 	onCommand();
 }
@@ -116,6 +117,7 @@ void StuManagerMainUI::onCommand()
 	case STU_COM_HELP:
 	case STU_COM_SEARCH:
 	case STU_COM_DEL:
+	case STU_COM_ALL:
 		//onComHelp();
 		if (m_pStuUIDirector != NULL)
 		{

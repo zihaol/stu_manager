@@ -326,6 +326,15 @@ void CSQLOper::UpdateRecordSet(const char* szSqlCmd, enum CursorTypeEnum Curscor
 	} while (false);
 };
 
+void CSQLOper::showRecord()
+{
+	while (!m_pCurrentRecordSet->EndOfFile)
+	{
+		printf("%d, %s, %d\n", (int)getData("num"), (char*)(_bstr_t)getData("name"), (int)getData("age"));
+		m_pCurrentRecordSet->MoveNext();
+	}
+}
+
 _variant_t CSQLOper::getData(long lLieNum)
 {
 	_variant_t nRet = (_variant_t)(_bstr_t)"Œ¥≤È—Ø";

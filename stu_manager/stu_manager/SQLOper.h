@@ -19,6 +19,7 @@ public:
 	void UpdateRecordSet(const char* szSqlCmd, enum CursorTypeEnum CurscorType = adOpenDynamic, enum LockTypeEnum LockType = adLockOptimistic, long lOptions = adCmdText);
 	_variant_t getData(long lLieNum);
 	_variant_t getData(const char* szCollect);
+	void showRecord();
 	void ExecSql(const char* szSqlCmd, long lOptions = adCmdText);
 	//存储过程实现
 	void updateStuInfo(int nID, const char* szName, int nAge);
